@@ -1,0 +1,47 @@
+<!--pages/settingInfo/settingInfo.wxml-->
+<view class="divider"></view>
+<form  bindsubmit="formSubmit">
+  <view class="cell">
+
+    <view class="cell-item mycell">
+      <view>账号：</view>
+      <view class="uphone">{{userInfo.uphone}}</view>
+    </view>
+
+    <view class="cell-item mycell">
+      <view>昵称：</view>
+      <view>
+        <input value="{{userInfo.uname}}" name="uname"></input>
+      </view>
+    </view>
+
+    <view class="cell-item mycell">
+      <view>性别:</view>
+      <view>
+        <radio-group name="usex">
+          <radio value="1" checked="{{userInfo.usex==1}}"/>男<radio value="0" class="radio-space" checked="{{userInfo.usex!=1}}"/>女
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="cell-item mycell">
+      <view>地区：</view>
+      <view>
+        <input value="{{userInfo.uzone}}" name="uzone"></input>
+      </view>
+    </view>
+
+    <view class="cell-item mycell">
+      <view>生日：</view>
+      <view>
+        <input value="{{userInfo.ubirth}}" name="ubirth"></input>
+      </view>
+    </view>
+  </view>
+  
+  <view class="divider"></view>
+
+  <button class="submit" formType="submit">
+    保存修改
+  </button>
+</form>

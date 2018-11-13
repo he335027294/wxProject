@@ -1,0 +1,48 @@
+<!--pages/home/home.wxml-->
+<!-- <view class="top-search">
+  <navigator class="search-link">
+    <view class="me-search">
+      <image src="/assets/img/icon/search.png"></image>
+      <text>有品11.11订单返券</text>
+    </view>
+  </navigator>
+</view> -->
+<search></search>
+<!--图片轮播-->
+<view class="search-fit"></view>
+<view class="slider">
+   <swiper autoplay interval="5000" indicator-dots="{{true}}" indicator-color='#fff' indicator-active-color='#e81'>
+     <swiper-item   wx:for="{{imagelist}}" wx:key="{{id}}">
+     <image src="{{item.img_url}}" mode="widthFix" lazy-load />
+     </swiper-item>
+   </swiper>
+</view>
+<!-- 五格导航 -->
+<view class="navi">
+  <view wx:for="{{breif}}" wx:key="{{index}}" class="navi-item">
+    <image src="{{item.img_url}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+<view class="hongbao">
+  <image src="{{hongbao[0].img_url}}"></image>
+</view>
+<view class="divider"></view>
+<!-- 今日有品 -->
+<view class="cell">
+  <view class="cell-item">
+    <text>今日有品</text>
+  </view>
+  <view wx:for="{{todaylist}}" wx:key="{{index}}" class="cell-item today-good">
+    <view class="good-img">
+      <image src="{{item.img_url}}" bindtap="showDetail" data-id="{{item.id}}"></image>
+    </view>
+    <view class="good-des">
+      <text class="good-title">{{item.title}}</text>
+      <text class="good-info">{{item.info_a}}</text>
+      <text class="good-price">￥{{item.price}}</text>
+    </view>
+  </view>
+</view>
+
+

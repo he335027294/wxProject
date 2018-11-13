@@ -1,0 +1,9 @@
+<!--components/search/search.wxml-->
+<view class="top-search">
+  <navigator class="search-link">
+    <view class="me-search">
+      <image src="/assets/img/icon/search.png"></image>
+      <text>有品11.11订单返券</text>
+    </view>
+  </navigator>
+</view>

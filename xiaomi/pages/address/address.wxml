@@ -1,0 +1,16 @@
+<!--pages/address/address.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class="uname">{{userInfo.uname}}</view>
+    <view class="address">
+      <view class="tip">收货地址:</view>
+      <view class="tip2">(点击下方输入框进行修改,不超过120字)</view>
+      <view class="address-input">
+        <textarea value="{{userInfo.uaddress}}" name="myaddress"></textarea> 
+      </view>
+    </view>
+  </view>
+  <button class="submit" formType="submit">
+    保存地址
+  </button>
+</form>

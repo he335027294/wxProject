@@ -1,0 +1,55 @@
+<!--pages/detail/detail.wxml-->
+<view class="slider">
+   <swiper autoplay interval="5000" indicator-dots="{{true}}" indicator-color='#fff' indicator-active-color='#e81'>
+     <!-- <swiper-item   wx:for="{{imagelist}}" wx:key="{{id}}">
+     <image src="{{item.img_url}}" mode="widthFix" lazy-load />
+     </swiper-item> -->
+     <swiper-item>
+      <image src="http://127.0.0.1:3000/img/home/banner/banner1.jpg"></image>
+     </swiper-item>
+     <swiper-item>
+      <image src="http://127.0.0.1:3000/img/home/banner/banner2.jpg"></image>
+     </swiper-item>
+   </swiper>
+</view>
+<view class="cell">
+  <view class="cell-item good-total">
+    <view class="good-title">{{list.title}}</view>
+    <view class="good-info">{{list.info}}</view>
+    <view class="good-price">￥{{list.price}}</view>
+  </view>
+  <view class="cell-item good-active mycellitem">
+    <view class="text-before">活动：</view>
+    <view class="activity">11.11好物同价购</view>  
+  </view>
+</view>
+<view class="divider"></view>
+<view class="cell">
+  <view class="cell-item supplement mycellitem">
+    <view class="text-before">说明：</view>
+    <view>
+      <view>本产品为有品第三方产品</view>
+      <view>本产品由产品卖家发货并提供售后</view>
+      <view>支持7天无理由退货（详情请联系客服）</view>
+    </view>
+  </view>
+</view>
+<view class="divider"></view>
+<view class="cell">
+  <view class="cell-item buy-count mycellitem">
+    <view class="text-before">数量：</view>
+    <view class="tui-number-group">
+      <button bindtap="subNum" class="tui-number-cell">-</button>
+      <input class="tui-number-cell count-cell" type="number" value="{{count}}" bindblur="myblur"></input>
+      <button bindtap="addNum" class="tui-number-cell">+</button>
+     </view>
+  </view>
+</view>
+<view class="divider"></view>
+
+<view class="bottom-fix">
+  <view class="btn btn-collect">添加收藏</view>
+  <view class="btn btn-buy">加入购物车</view>
+</view>
+
+

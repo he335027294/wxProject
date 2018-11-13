@@ -1,0 +1,21 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <view class="logo">
+    <image src="../../assets/img/login/youpin.png" mode='widthFix'></image>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input-cell">
+      <input placeholder='请输入手机号' name="uphone"></input>
+    </view>
+    <view class="input-cell">
+      <input placeholder="请输入您的密码" password='true' name="upwd"></input>
+    </view>
+    <view class="button-group">
+      <button class="reset" formType="reset">重置</button>
+      <button class="login" formType="submit">登陆</button>
+    </view>
+  </form>
+  <view class="userNotyet">
+    <text bindtap="toRegister">还没账号，前往注册</text>
+  </view>
+</view>

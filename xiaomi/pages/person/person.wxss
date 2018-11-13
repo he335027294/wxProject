@@ -1,0 +1,45 @@
+/* pages/person/person.wxss */
+page{
+  background-color:#f1f1f1;
+}
+.profile{
+  display: flex;
+}
+.person-profile{
+  height:160rpx;
+  width:160rpx;
+  border-radius: 50%;
+  background:#666;
+}
+.person-info{
+  padding-top:56rpx;
+  padding-left:20rpx;
+  display: flex;
+  flex-flow:column nowrap;
+}
+.person-info .uname{
+  font-weight:600;
+  font-size: 18px;
+}
+.person-info .addr{
+  font-size:15px;
+  padding-top:12rpx;
+  color:#666;
+}
+.item-info{
+  display:flex;
+  flex-flow:row nowrap;
+  align-items: center;
+}
+.item-info image{
+  width:60rpx;
+  height:60rpx;
+  padding-right:16rpx;
+}
+
+
+/* 尚未登陆 */
+.toLogin{
+  margin-top:20rpx;
+  text-decoration: underline;
+}

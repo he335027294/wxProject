@@ -1,0 +1,14 @@
+<!--pages/setting/setting.wxml-->
+<view class="divider"></view>
+<view class="cell">
+  <view class="cell-item arrow" bindtap="toSettingInfo">个人基本信息</view>
+  <view class="cell-item arrow" bindtap="toSettingKey">个人密码设置</view>
+  <view class="cell-item arrow" bindtap="toAddress">收货地址设置</view>
+</view>
+<view class="divider"></view>
+<view class="cell">
+  <view class="cell-item arrow" bindtap="userQuit">退出登陆</view>
+</view>
+<view class="divider"></view>
+  
+

@@ -1,0 +1,37 @@
+<!--pages/shopping/shopping.wxml-->
+<view wx:if="{{isEmpty}}">
+  <view class="container">
+    <view class="empty" bindtap='toList'>
+      <image src="../../assets/img/shopping/shop_empty.png" mode="widthFix"></image>
+    </view>
+  </view> 
+</view>
+<view wx:else>
+  <view class="good-container">
+
+    <view class="cell">
+
+      <checkbox></checkbox>
+
+      <view class="cell-item shop-good">
+        <view class="good-img">
+          <image src="http://127.0.0.1:3000/img/goodimg/22.png"></image>
+        </view>
+        <view class="good-des">
+          <text class="good-title">小米米家电动滑板车</text>
+          <text class="good-info">极简几何设计，1分钟轻松上手/30公里超长续航/双重刹车系统/便携折叠</text>
+          <text class="good-price">￥1999.00</text>
+          <view class="tui-number-group">
+            <view class="my-btn">-</view>
+            <view class="my-count">
+              <input value="1"></input>
+            </view>
+            <view class="my-btn">+</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

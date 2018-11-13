@@ -1,0 +1,33 @@
+page{}
+.logo{
+  padding-bottom:40rpx;
+}
+.logo image{
+  width:200rpx;
+}
+.input-cell{
+  margin:20rpx 0;
+}
+.input-cell input{
+  border-bottom:1px solid #aaa;
+  text-align: center
+}
+.button-group{
+  display:flex;
+  margin:20rpx;
+}
+.button-group button{
+  margin:10rpx;
+  width:42%;
+  color:#fff;
+}
+button.reset{
+  background-color:#d10
+}
+button.register{
+  background-color:#dd2;
+}
+.userAlready{
+  text-decoration: underline;
+  color:#999;
+}

@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="logo">
+    <image src="../../assets/img/login/youpin.png" mode='widthFix'></image>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input-cell">
+      <input placeholder='请输入手机号' name="uphone" value="{{uphone}}"></input>
+    </view>
+    <view class="input-cell">
+      <input placeholder="请输入6-10位的密码" password='true' name="upwd"></input>
+    </view>
+    <view class="input-cell">
+      <input placeholder="请确认您的密码" password='true' name="upwd2"></input>
+    </view>
+    <view class="userAgree">
+      <checkbox-group name="cb">
+        <checkbox checked="{{true}}" value="A"></checkbox><text>已同意用户协议和隐私政策</text>
+      </checkbox-group> 
+    </view>
+    <view class="button-group">
+      <button class="reset" formType="reset">重置</button>
+      <button class="register" formType="submit">注册</button>
+    </view>
+  </form>
+  <view class="userAlready">
+    <text bindtap="toLogin">已有账户，立即登陆</text>
+  </view>
+</view>

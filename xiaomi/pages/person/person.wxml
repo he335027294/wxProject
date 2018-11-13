@@ -1,0 +1,126 @@
+<!--pages/person/person.wxml-->
+<view wx:if="{{userId!=0}}">
+  <view class="divider"></view>
+  <view class="cell">
+    <view class="cell-item profile">
+      <view>
+        <image src="../../assets/img/person/profile.png" class="person-profile"></image>
+      </view>
+      <view class="person-info">
+        <text class="uname">{{userInfo.uname}}</text>
+        <text class="addr">{{userInfo.uzone}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="divider"></view>
+  <view class="cell">
+    <view class="cell-item arrow">
+      <view class="item-info">
+        <image src="{{userInfo.img_url}}"></image>
+        <text>我的订单</text>
+      </view>   
+    </view>
+  </view>
+  <view class="divider"></view>
+  <view class="cell">
+    <view class="cell-item arrow">
+      <view class="item-info">
+        <image src="../../assets/img/person/收藏.png"></image>
+        <text>我的收藏</text>
+      </view>  
+    </view>
+    <view class="cell-item arrow">
+      <view class="item-info">
+        <image src="../../assets/img/person/优惠券.png"></image>
+        <text>优惠券</text>
+      </view> 
+    </view>
+    <view class="cell-item arrow" bindtap="toAddress">
+      <view class="item-info">
+        <image src="../../assets/img/person/地理位置.png"></image>
+        <text>地址管理</text>
+      </view>
+    </view>
+    <view class="cell-item arrow">
+      <view class="item-info">
+        <image src="../../assets/img/person/服务中心.png"></image>
+        <text>服务中心</text>
+      </view>
+    </view>
+  </view>
+  <view class="divider"></view>
+  <view class="cell">
+    <view class="cell-item arrow" bindtap="toSetting">
+      <view class="item-info">
+        <image src="../../assets/img/person/设置.png"></image>
+        <text>个人设置</text>
+      </view>
+    </view>
+  </view>
+  <view class="divider"></view>
+</view>
+<!----------------->
+<view wx:else>
+  <view class="container">
+    <text>您尚未登录</text> 
+    <text class="toLogin" bindtap="toLogin">前往登录界面</text>
+  </view> 
+</view>
+<!-- <view class="divider"></view>
+<view class="cell">
+  <view class="cell-item profile">
+    <view>
+      <image src="../../assets/img/person/profile.png" class="person-profile"></image>
+    </view>
+    <view class="person-info">
+      <text class="uname">飞翔de心</text>
+      <text class="addr">广东 广州</text>
+    </view>
+  </view>
+</view>
+<view class="divider"></view>
+<view class="cell">
+  <view class="cell-item arrow">
+    <view class="item-info">
+      <image src="../../assets/img/person/订单.png"></image>
+      <text>我的订单</text>
+    </view>   
+  </view>
+</view>
+<view class="divider"></view>
+<view class="cell">
+  <view class="cell-item arrow">
+    <view class="item-info">
+      <image src="../../assets/img/person/收藏.png"></image>
+      <text>我的收藏</text>
+    </view>  
+  </view>
+  <view class="cell-item arrow">
+    <view class="item-info">
+      <image src="../../assets/img/person/优惠券.png"></image>
+      <text>优惠券</text>
+    </view> 
+  </view>
+  <view class="cell-item arrow">
+    <view class="item-info">
+      <image src="../../assets/img/person/地理位置.png"></image>
+      <text>地址管理</text>
+    </view>
+  </view>
+  <view class="cell-item arrow">
+    <view class="item-info">
+      <image src="../../assets/img/person/服务中心.png"></image>
+      <text>服务中心</text>
+    </view>
+  </view>
+</view>
+<view class="divider"></view>
+<view class="cell">
+  <view class="cell-item arrow">
+    <view class="item-info">
+      <image src="../../assets/img/person/设置.png"></image>
+      <text>个人设置</text>
+    </view>
+  </view>
+</view>
+<view class="divider"></view> -->
