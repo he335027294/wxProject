@@ -1,0 +1,36 @@
+<!--pages/order/order.wxml-->
+<view wx:if="{{orderlist.length>0}}">
+  <view class="box">
+    <view class="mytitle">我的订单：</view>  
+    <view class="order-list clearfix">
+      <view wx:for="{{orderlist}}" class="order-item" wx:key="{{index}}">
+        <view class="item-title">{{item.title}}</view>
+        <view class="priceCount">
+          <view class="item-price">￥{{item.price}}</view>
+          <view class="item-count">x {{item.goodCount}}</view>
+        </view>
+      </view>
+      <view class="sum">总计：<text class="sum-num">￥{{sum}}</text></view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="mytitle">收货地址：</view>  
+    <view class="receive-list">
+      <view class="user-thing">
+        <view class="uname">{{userInfo.uname}}</view>
+        <view class="uphone">{{userInfo.uphone}}</view>
+      </view>
+      <view>{{userInfo.uaddress}}</view>
+    </view>
+    <view bindtap="changeAdd" class="btn-change">修改收货地址</view>
+  </view>
+  <view class="bottom-fix">
+    <view class="btn btn-clear" bindtap="clearAll">清空订单</view>
+    <view class="btn btn-buy" bindtap="buyNow">立即支付</view>
+  </view>
+</view>
+<view wx:else>
+  <view class="container">
+    <text class="desc-none" bindtap="toList">尚无订单,去随便逛逛</text>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/searchPage/searchPage.wxml-->
+<view class="search-box">
+  <input placeholder="请输入你要搜索的商品关键字" class="input-search" value="{{searchword}}" bindinput="wordInput"></input>
+  <view class="btn-search" bindtap="search" data-words="{{searchword}}">搜索</view>
+</view>
+<view class="tipword">
+  <view wx:if="{{tipNum==0}}">
+    您尚未进行搜索操作~~
+  </view>
+  <view wx:elif="{{tipNum==-1}}">
+    亲~没有找到相关商品
+  </view>
+  <view wx:elif="{{tipNum==1}}">
+    一共为您找到了 <text class="searchCount">{{listLength}}</text> 件商品
+  </view>
+</view>
+
+<view class="cell">
+  <view wx:for="{{searchlist}}" wx:key="{{index}}" class="cell-item today-good">
+    <view class="good-img" bindtap="showDetail" data-id="{{item.id}}">
+      <image src="{{item.img_url}}" bindtap="showDetail" data-id="{{item.id}}"></image>
+    </view>
+    <view class="good-des">
+      <text class="good-title">{{item.title}}</text>
+      <text class="good-info">{{item.info_a}}</text>
+      <text class="good-price">￥{{item.price}}</text>
+    </view>
+  </view>
+</view>

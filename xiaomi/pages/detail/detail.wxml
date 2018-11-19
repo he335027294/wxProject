@@ -1,9 +1,6 @@
 <!--pages/detail/detail.wxml-->
-<view class="slider">
+<!-- <view class="slider">
    <swiper autoplay interval="5000" indicator-dots="{{true}}" indicator-color='#fff' indicator-active-color='#e81'>
-     <!-- <swiper-item   wx:for="{{imagelist}}" wx:key="{{id}}">
-     <image src="{{item.img_url}}" mode="widthFix" lazy-load />
-     </swiper-item> -->
      <swiper-item>
       <image src="http://127.0.0.1:3000/img/home/banner/banner1.jpg"></image>
      </swiper-item>
@@ -11,6 +8,9 @@
       <image src="http://127.0.0.1:3000/img/home/banner/banner2.jpg"></image>
      </swiper-item>
    </swiper>
+</view> -->
+<view class="good-img">
+  <image src="{{list.img_url}}" mode="aspectFit"></image>
 </view>
 <view class="cell">
   <view class="cell-item good-total">
@@ -46,10 +46,11 @@
   </view>
 </view>
 <view class="divider"></view>
-
+<view class="bottom-block"></view>
 <view class="bottom-fix">
-  <view class="btn btn-collect">添加收藏</view>
-  <view class="btn btn-buy">加入购物车</view>
+  <view class="btn btn-collect" bindtap="addcart" data-id="{{list.id}}" data-title="{{list.title}}" data-price="{{list.price}}" data-image="{{list.img_url}}" data-count="{{count}}" data-info="{{list.info}}">加入购物车</view>
+  <view class="btn btn-buy" bindtap="buyNow">立即购买</view>
+  <view class="btn toShopping" bindtap="toShopping">前往购物车</view>
 </view>
 
 

@@ -1,0 +1,109 @@
+/* pages/order/order.wxss */
+page{
+  background-color:#eee;
+  padding-bottom:120rpx;
+}
+.box{
+  padding:20rpx;
+  position: relative;
+}
+.clearfix::after{
+  display:block;clear:both;content:"";
+}
+.mytitle{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:10rpx;
+}
+.priceCount{
+  display:flex;
+}
+.order-list{
+  border:1px solid #875f3f;
+  padding:20rpx;
+  border-radius:10rpx;
+  background-color:#fff;
+}
+.order-item{
+  padding-top:18rpx;
+  padding-bottom:18rpx;
+  border-bottom:1px solid #875f3f;
+}
+.order-item:last-child{
+  border-bottom:0;
+}
+.priceCount view:first-child{
+  width:560rpx;
+}
+.item-title{
+  margin-bottom:10rpx;
+}
+.item-price{
+  font-size:16px;
+  color:#d11;
+  font-weight:600;
+}
+.item-count{
+  font-weight:600;
+}
+.sum{
+  float:right;
+  width:240rpx;
+  margin-top:10rpx;
+}
+.sum-num{
+  font-size:16px;
+  font-weight:600;
+  color:#d11;
+}
+.receive-list{
+  border:1px solid #875f3f;
+  padding:20rpx;
+  border-radius:10rpx;
+  background-color:#fff;
+}
+.user-thing{
+  display:flex;
+  justify-content: space-between;
+  margin-bottom:20rpx;
+}
+.uname,.uphone{
+  font-size:16px;
+  font-weight:600;
+}
+.btn-change{
+  position:absolute;
+  top:28rpx;
+  right:20rpx;
+  color:#666;
+}
+/* 底部固定 */
+.bottom-fix{
+  background-color:#fff;
+  position:fixed;
+  bottom:0;
+  left:0;
+  height:100rpx;
+  width:100%;
+  display:flex;
+  justify-content: flex-end;
+}
+.bottom-fix .btn{
+  height:100%;
+  padding-left:30rpx;
+  padding-right:30rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+}
+.bottom-fix .btn-buy{
+  background-color:rgb(179,11,8);
+}
+.bottom-fix .btn-clear{
+  background-color:rgb(170,140,90);
+}
+.desc-none{
+  text-decoration:underline;
+  color:#666;
+}

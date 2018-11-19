@@ -8,30 +8,50 @@
 </view>
 <view wx:else>
   <view class="good-container">
+    <view class="cell" wx:for="{{cartItems}}" wx:key="{{index}}">
 
-    <view class="cell">
-
-      <checkbox></checkbox>
+      <view class='icon'>
+        <icon wx:if="{{item.selected}}" type="success" color="#875f3f" size="20" bindtap="selectedCart" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectedCart" size="20" data-index="{{index}}"/>
+      </view>
 
       <view class="cell-item shop-good">
         <view class="good-img">
-          <image src="http://127.0.0.1:3000/img/goodimg/22.png"></image>
+          <image src="{{item.image}}"></image>
         </view>
         <view class="good-des">
-          <text class="good-title">小米米家电动滑板车</text>
-          <text class="good-info">极简几何设计，1分钟轻松上手/30公里超长续航/双重刹车系统/便携折叠</text>
-          <text class="good-price">￥1999.00</text>
+          <text class="good-title">{{item.title}}</text>
+          <text class="good-info">{{item.info}}</text>
+          <text class="good-price">￥{{item.price}}</text>
           <view class="tui-number-group">
-            <view class="my-btn">-</view>
+            <view class="my-btn btn-sub" bindtap='subcount' data-index="{{index}}">-</view>
             <view class="my-count">
-              <input value="1"></input>
+              <input value="{{item.value}}" bindblur='changecount' data-index="{{index}}"></input>
             </view>
-            <view class="my-btn">+</view>
+            <view class="my-btn btn-add" bindtap='addcount' data-index="{{index}}">+</view>
           </view>
+          <image src="../../assets/img/icon/delete.png" class="delete" bindtap='deleteCart' data-index="{{index}}"></image>
         </view>
       </view>
 
+
     </view>
 
+  </view>
+  <view class="sum-bottom">
+    <view class="select-all">
+      <icon wx:if="{{CheckAll}}"  class="cart-icon" type="success" color="#875f3f" size="20" bindtap="select"/>
+      <icon wx:else type="circle"   class="cart-icon" size="20" bindtap="select"/>
+      <text>全选</text>
+    </view>
+    <view class="sum-up">
+      合计: <text class="sum-price">￥{{total}}</text>
+    </view>
+    <view class="clear-all" bindtap="clearAll">
+      清空购物车
+    </view>
+    <view class="submit-order" bindtap="submitOrder">
+      提交订单
+    </view>
   </view>
 </view>

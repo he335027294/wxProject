@@ -1,22 +1,22 @@
 {
   "pages": [
-    "pages/shopping/shopping",
-    "pages/home/home",
+    "pages/settingKey/settingKey",
     "pages/settingInfo/settingInfo",
+    "pages/home/home",
     "pages/person/person",
+    "pages/searchPage/searchPage",
+    "pages/detail/detail",
+    "pages/shopping/shopping",
     "pages/setting/setting",
-    
     "pages/address/address",
     "pages/login/login",
     "pages/register/register",
-    
-    "pages/detail/detail",
     "pages/list/list",
     "pages/index/index",
     "pages/logs/logs",
-    "components/search/search",
-    "pages/settingKey/settingKey"
-    
+    "pages/order/order",
+    "pages/about/about",
+    "pages/service/service"
   ],
   "window": {
     "backgroundTextStyle": "light",

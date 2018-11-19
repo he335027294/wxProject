@@ -11,6 +11,8 @@ const routerType= require("./router/type");
 const routerHome= require("./router/home");
 const routerDetail=require("./router/detail");
 const routerUser=require("./router/user");
+const routerSearch=require("./router/search");
+const routerOrder=require("./router/order");
 app.use(express.static(__dirname+"/public"));
 //3:绑定监听端口
 app.listen(3000);
@@ -19,3 +21,6 @@ app.use("/home",routerHome);
 app.use("/detail",routerDetail);
 app.use("/user",routerUser);
 app.use("/update",routerUpdate);
+app.use("/search",routerSearch);
+app.use("/order",routerOrder);
+

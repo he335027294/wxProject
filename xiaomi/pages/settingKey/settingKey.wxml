@@ -1,2 +1,14 @@
-<!--pages/settingKey/settingKey.wxml-->
-<text>pages/settingKey/settingKey.wxml</text>
+
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class="uname">{{userInfo.uname}}</view>
+    <view class="key">
+      <view class="key-item"><text>旧密码:</text> <input placeholder='请输入旧密码' name="oldUpwd" type="password"></input> </view>
+      <view class="key-item"><text>新密码:</text> <input placeholder='请输入6-12位新密码' name="newUpwd" type="password"></input> </view>
+      <view class="key-item"><text>确认密码:</text> <input placeholder='请再次输入新密码' name="checkUpwd" type="password"></input> </view>
+    </view>
+  </view>
+  <button class="submit" formType="submit">
+    保存修改
+  </button>
+</form>

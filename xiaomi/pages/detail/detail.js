@@ -93,5 +93,41 @@ Page({
     this.setData({
       count: n
     })
+  },
+  addcart:function(e){
+    //获取缓存
+    var cartItems=wx.getStorageSync("cartItems")||[];
+    //数据处理
+    var {count,id,image,price,title,info}=e.target.dataset;
+    var exist=cartItems.find(function(el){
+      return el.id==id;
+    })
+    if(exist){
+      exist.value = parseInt(exist.value)+count;
+    }else{
+      cartItems.push({
+        id,title,image,price,value:count,selected:true,info
+      })
+    }
+    //提示信息
+    wx.showToast({
+      title:"添加成功",
+      icon:"success",
+      duration:1000
+    })
+    //更新缓存
+    wx.setStorageSync("cartItems", cartItems)
+    //console.log(wx.getStorageSync("cartItems"))
+  },
+  toShopping:function(){
+    wx.switchTab({
+      url: '../shopping/shopping',
+    })
+  },
+  buyNow:function(){
+    wx.showToast({
+      title: '抱歉，暂不支持此功能',
+      icon:"none"
+    })
   }
 })

@@ -1,0 +1,4 @@
+/* pages/service/service.wxss */
+.toBe{
+  color:#666;
+}

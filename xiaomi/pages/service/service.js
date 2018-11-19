@@ -1,12 +1,11 @@
-// pages/setting/setting.js
-var app=getApp();
+// pages/service/service.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**
@@ -57,39 +56,11 @@ Page({
   onReachBottom: function () {
 
   },
+
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 
-  },
-  toAddress: function () {
-    wx.navigateTo({
-      url: '../address/address',
-    })
-  },
-  toSettingInfo:function(){
-    wx.navigateTo({
-      url:'../settingInfo/settingInfo'
-    })
-  },
-  toSettingKey: function () {
-    wx.navigateTo({
-      url: '../settingKey/settingKey'
-    })
-  },
-  userQuit: function () {
-    wx.showModal({
-      title: '提示',
-      content: '确定要退出登录吗？',
-      success: function (sm) {
-        if (sm.confirm) {
-          app.globalData.userId = 0
-          wx.switchTab({
-            url: '../person/person',
-          })
-        }
-      }
-    })
   }
 })

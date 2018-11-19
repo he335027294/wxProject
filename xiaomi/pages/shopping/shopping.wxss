@@ -1,6 +1,6 @@
 /* pages/shopping/shopping.wxss */
 page{
-  background-color:rgb(250,250,250)
+  background-color:#eee
 }
 .empty{
   width:100%;
@@ -11,15 +11,23 @@ page{
   background-color:rgb(250,250,250);
 }
 .cell{
-  padding:20rpx;
+  padding-top:20rpx;
   display:flex;
   flex-flow:row nowrap;
   justify-content: center;
   align-items: center;
 }
+.good-container::after{
+  content: "";
+  display: block;
+  height:140rpx;
+  width:100%;
+}
 .shop-good{
+  padding:18rpx !important;
+  padding-right:40rpx !important;
   display:flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 .shop-good .good-img{
   height:180rpx;
@@ -97,5 +105,63 @@ page{
   text-align: center;
   line-height: 50rpx;
 }
+/*delete*/
+.delete{
+  position:absolute;
+  top:-10rpx;
+  right:-20rpx;
+  width:34rpx;
+  height:34rpx;
+}
+/* 底部信息 */
+.sum-bottom{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  position:fixed;
+  height:100rpx;
+  width:100%;
+  left:0;
+  bottom:0;
+  background-color:#fff;
+}
+.select-all{
+  position: absolute;
+  left:20rpx;
+  top:22rpx;
+}
+.clear-all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right:14rpx;
+  padding-left:14rpx;
+  height:100%;
+  color:#fff;
+  background-color:#875f3f;
+}
+.submit-order{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right:14rpx;
+  padding-left:14rpx;
+  height:100%;
+  color:#fff;
+  background-color:#a11;
+}
+.sum-up{
+  width:240rpx;
+}
+.sum-up .sum-price{
+  color:#d11 ;
+  font-weight:600;
+}
 
+.icon{
+  margin-right:20rpx;
+}
+.cart-icon{
+  margin-right:16rpx;
+}
 

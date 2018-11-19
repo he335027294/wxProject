@@ -93,15 +93,15 @@ CREATE TABLE xm_userlist(
 INSERT INTO xm_userlist VALUES
 (null,default,"13660268680","123456","飞翔dei心","广东 韶关","广东省广州市越秀区喜剧广场3楼小桌子",default,"1994-11-14");
 
-#购物车列表 xm_shoplist
-CREATE TABLE xm_shoplist(
+#订单列表 xm_shoplist
+CREATE TABLE xm_orderlist(
     id      INT PRIMARY KEY AUTO_INCREMENT,
     userId  INT,
     goodId  INT,
     goodCount INT
 );
-INSERT INTO xm_shoplist VALUES(null,1,4,1);
-INSERT INTO xm_shoplist VALUES(null,1,32,1);
+INSERT INTO xm_orderlist VALUES(null,1,4,1);
+INSERT INTO xm_orderlist VALUES(null,1,32,1);
 
 
 

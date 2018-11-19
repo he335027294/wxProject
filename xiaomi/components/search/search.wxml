@@ -1,6 +1,6 @@
 <!--components/search/search.wxml-->
 <view class="top-search">
-  <navigator class="search-link">
+  <navigator class="search-link" url="../searchPage/searchPage">
     <view class="me-search">
       <image src="/assets/img/icon/search.png"></image>
       <text>有品11.11订单返券</text>

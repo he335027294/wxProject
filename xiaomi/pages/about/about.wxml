@@ -1,0 +1,12 @@
+<!--pages/about/about.wxml-->
+<view class="my-container">
+  <view class="p1 paragraph">
+    小米有品，原名米家有品，是小米公司精品生活购物平台，也是小米“新零售”战略的重要一环。依托小米生态链体系，用小米模式做生活消费品，将小米的“极致性价比”延伸到生活家居领域的方方面面。
+  </view>
+  <view class="p2 paragraph">
+    小米有品秉承小米始终坚持做“感动人心、价格厚道的好产品”的理念，作为小米在生活消费品领域的主阵地，有品致力于为用户提供高品质、高颜值、高性价比、有科技感的生活消费类产品。
+  </view>
+  <view class="erweima">
+    <image src="../../assets/img/erweima.jpg"></image>
+  </view>
+</view>
